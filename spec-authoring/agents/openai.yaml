@@ -1,0 +1,4 @@
+interface:
+  display_name: "规范编写"
+  short_description: "以适当约束编写和修订规范，明确目的、原则与边界，保留做法选择空间"
+  default_prompt: "使用 $spec-authoring，结合实际目的、背景和已有材料，编写或修订以原则和边界引导判断、尽量保留做法选择空间的规范。"
