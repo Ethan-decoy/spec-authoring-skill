@@ -1,10 +1,18 @@
 # spec-authoring · 规范编写
 
-An Agent Skill for drafting, revising, and reviewing guidelines. It clarifies shared understanding, principles, and boundaries while leaving room for judgment. The skill instructions are written in Chinese.
+[中文](README.md) · [English](README.en.md)
+
+An Agent Skill for drafting, revising, and reviewing guidelines. It clarifies shared understanding, principles, and boundaries while leaving room for judgment. Chinese is the primary version; an English translation is available.
 
 帮助 AI 根据实际目的、背景和已有材料编写、修订或评审规范。以适当约束形成共同理解和判断依据，在符合目的、原则和边界的前提下，尽量保留具体做法的选择空间。
 
 技能不以领域清单限定用途，也不要求固定栏目、执行步骤或输出模板。仅依据既有规范完成其他任务时，无需使用本技能。
+
+## 语言
+
+中文是主要维护与验证的版本。[英文技能译文](spec-authoring/SKILL.en.md)供读者理解和参考，按中文原文同步；含义出现差异时，以[中文原文](spec-authoring/SKILL.md)为准。
+
+安装后仍以中文 `SKILL.md` 为入口，界面说明保持中文。任务和输出语言可以按需要指定；提供英文译文不代表已经验证英文指令的使用效果。
 
 ## 安装
 
@@ -13,10 +21,10 @@ An Agent Skill for drafting, revising, and reviewing guidelines. It clarifies sh
 向 Codex 发送：
 
 ```text
-$skill-installer 安装 https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.1.0/spec-authoring
+$skill-installer 安装 https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.1.1/spec-authoring
 ```
 
-该入口固定到 `v0.1.0`。需要跟随最新源码时，将链接中的 `v0.1.0` 换成 `main`。
+该入口固定到 `v0.1.1`。需要跟随最新源码时，将链接中的 `v0.1.1` 换成 `main`。
 
 ### 手动安装
 
@@ -30,15 +38,16 @@ Codex 可使用用户目录 `~/.agents/skills/spec-authoring/`，或目标项目
 使用 $spec-authoring，根据当前目的、背景和已有材料，起草或修订所需规范。
 ```
 
-提供手头已有的材料和需要解决的问题即可；不需要预先填满一套固定字段。正文为中文，任务与输出语言可以按需要指定。
+提供手头已有的材料和需要解决的问题即可；不需要预先填满一套固定字段。
 
 ## 内容与原则
 
-技能正文见 [spec-authoring/SKILL.md](spec-authoring/SKILL.md)。它区分已确认的要求、观察到的做法、事实与建议，保留适用条件和未决事项；既有做法不会仅因存在就自动取得约束效力。规范正文承载可使用的约定，研究和修改过程按用途另行安置。
+技能正文见[中文原文](spec-authoring/SKILL.md)与[英文译文](spec-authoring/SKILL.en.md)。它区分已确认的要求、观察到的做法、事实与建议，保留适用条件和未决事项；既有做法不会仅因存在就自动取得约束效力。规范正文承载可使用的约定，研究和修改过程按用途另行安置。
 
 ```text
 spec-authoring/
 ├── SKILL.md
+├── SKILL.en.md
 ├── LICENSE
 └── agents/
     └── openai.yaml
@@ -48,7 +57,7 @@ spec-authoring/
 
 ## 试用与反馈
 
-`v0.1.0` 是公开试用版。已进行格式校验和少量实际材料的起草检查，尚未证明跨任务、跨模型的稳定改善。
+当前版本为 `v0.1.1` 公开试用版，在 `v0.1.0` 的基础上增加英文阅读材料，中文技能正文未变。已进行格式校验和少量实际材料的起草检查，尚未证明跨任务、跨模型的稳定改善。
 
 欢迎通过 [Issues](https://github.com/Ethan-decoy/spec-authoring-skill/issues) 反馈预期用途、实际表现及需要改进的判断。分享材料前请移除私人信息。
 
