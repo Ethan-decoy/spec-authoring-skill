@@ -1,7 +1,7 @@
 interface:
-  display_name: "规范编写"
-  short_description: "编写与调整共同约定，评估规则是否合理，以适当约束保留做法选择空间"
-  default_prompt: "使用 $spec-authoring，结合实际目的、背景和已有材料，编写或修订以原则和边界引导判断、尽量保留做法选择空间的规范。"
+  display_name: "规范构建"
+  short_description: "构建与修订规范，将背景和要求形成共同原则与边界，保留做法选择空间"
+  default_prompt: "使用 $spec-authoring，结合实际目的、背景和已有材料，构建或修订以原则和边界引导判断、尽量保留做法选择空间的规范。"
 
 policy:
   allow_implicit_invocation: true

@@ -2,20 +2,20 @@
 
 [中文](README.md) · [English](README.en.md)
 
-Agent Skills for establishing proportionate shared conventions and thoroughly checking whether work follows them.
+Agent Skills for building guidelines and reviewing existing material against applicable guidelines.
 
 ## Skills
 
 | Skill | Purpose | Status |
 | --- | --- | --- |
-| [spec-authoring · Guideline Authoring](spec-authoring/SKILL.en.md) | Draft, revise, or assess the guidelines themselves, using proportionate constraints to clarify purpose, principles, and boundaries while preserving choice of methods | Released `v0.2.1` |
-| [spec-review · Review Against Guidelines](spec-review/SKILL.en.md) | Check work against existing guidelines item by item, covering every applicable requirement and location and delivering conclusions in chat | Released `v0.2.1` |
+| [spec-authoring · Guideline Authoring](spec-authoring/SKILL.en.md) | Build or revise guidelines, forming shared principles, conventions, and boundaries from context and requirements while preserving choice of methods | Released `v0.2.2` |
+| [spec-review · Review](spec-review/SKILL.en.md) | Review existing material against applicable guidelines, checking every applicable requirement and location and reporting findings in chat; the material may itself be a guideline document | Released `v0.2.2` |
 
-Guideline Authoring applies wherever shared conventions are needed and does not prescribe fixed sections, steps, or output templates. Review Against Guidelines is complete when all applicable requirements have been checked; methods and the organization of results suit the task, with delivery in chat by default.
+Guideline Authoring applies wherever shared conventions are needed and does not prescribe fixed sections, steps, or output templates. Review is complete when all applicable requirements have been checked; methods and the organization of results suit the task, with delivery in chat by default.
 
 ## Language
 
-Chinese is the primary version for maintenance and validation. English translations help readers understand the instructions and are kept aligned with their respective Chinese originals. If their meanings differ, the Chinese originals take precedence. See the translations of [Guideline Authoring](spec-authoring/SKILL.en.md) and [Review Against Guidelines](spec-review/SKILL.en.md).
+Chinese is the primary version for maintenance and validation. English translations help readers understand the instructions and are kept aligned with their respective Chinese originals. If their meanings differ, the Chinese originals take precedence. See the translations of [Guideline Authoring](spec-authoring/SKILL.en.md) and [Review](spec-review/SKILL.en.md).
 
 The installed entry point remains the Chinese `SKILL.md`, and the interface text remains in Chinese. You can specify the language of a task and its output. Providing an English translation does not mean that the effectiveness of English instructions has been validated.
 
@@ -28,16 +28,16 @@ The two skills can be installed independently as needed.
 To install Guideline Authoring, send this to Codex:
 
 ```text
-$skill-installer install https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.2.1/spec-authoring
+$skill-installer install https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.2.2/spec-authoring
 ```
 
-To install Review Against Guidelines:
+To install Review:
 
 ```text
-$skill-installer install https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.2.1/spec-review
+$skill-installer install https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.2.2/spec-review
 ```
 
-These URLs are pinned to `v0.2.1`. To follow the latest source, replace `v0.2.1` with `main`.
+These URLs are pinned to `v0.2.2`. To follow the latest source, replace `v0.2.2` with `main`.
 
 ### Manual installation
 
@@ -47,38 +47,35 @@ For Codex, use `~/.agents/skills/` for your user account, or `.agents/skills/` i
 
 ## Usage
 
-To write or assess the conventions themselves:
+To build or revise guidelines:
 
 ```text
-Use $spec-authoring to draft or revise the guidelines we need, based on the current purpose, context, and available material.
+Use $spec-authoring to build or revise the guidelines we need, based on the current purpose, context, and available material.
 ```
 
 Provide the material you have and the problem you need to resolve. You do not need to fill out a fixed set of fields in advance.
 
-To review work against existing guidelines:
+To review existing material against applicable guidelines:
 
 ```text
-Use $spec-review to review the current work thoroughly against the applicable guidelines and explain the findings, evidence, and review limitations in chat.
+Use $spec-review to review the current material thoroughly against applicable guidelines and explain the findings, evidence, and review limitations in chat.
 ```
 
 ### Automatic invocation
 
-Both skills allow automatic invocation. Requests to review work under guidelines, or brief requests such as review this or check again when the object and applicable conventions are already known, fit `spec-review`. Requests to establish shared conventions, relax excessive constraints, or assess the rules themselves fit `spec-authoring`. A skill name or another copy of known guidelines is not required.
+The skills are distinguished by the requested action. Building or rewriting guidelines fits `spec-authoring`; reviewing existing material against guidelines to identify issues fits `spec-review`. For example, assessing whether a guideline document is reasonable is a review task, while revising it based on findings is an authoring task.
 
-Automatic selection matches the task to the skill description and is not guaranteed on every request. For clearer routing in an environment where the relevant skills are installed, optionally append a short instruction to the user-level or project `AGENTS.md` already in use. See the [official skill documentation](https://learn.chatgpt.com/docs/build-skills#how-chatgpt-and-codex-use-skills).
+Both capabilities may contribute to one task as needed for the user's goal. Their own entry points express this division; extra global routing rules, skill names, or repeated copies of known guidelines are not prerequisites. Merely following existing conventions to perform an ordinary task does not by itself activate either skill.
 
-```text
-Use $spec-review when reviewing or rechecking work against guidelines or existing conventions, including brief requests when the object and criteria are already clear from context.
-Use $spec-authoring when drafting, organizing, revising, or assessing the conventions themselves. Merely following existing conventions to perform a task does not activate either skill.
-```
+Both skills allow automatic invocation. Selection matches the task to the skill description and is not guaranteed on every request. See the [official skill documentation](https://learn.chatgpt.com/docs/build-skills#how-chatgpt-and-codex-use-skills).
 
-The installation archives do not modify global guidance. Test new guidance in a fresh session to avoid relying on instructions loaded at startup. See [AGENTS.md discovery](https://learn.chatgpt.com/docs/agent-configuration/agents-md#how-codex-discovers-guidance).
+If you manually added the global routing example from `v0.2.1`, remove its old object-based routing paragraphs while preserving other existing guidance.
 
 ## Contents and principles
 
 Read the [Chinese original](spec-authoring/SKILL.md) or the [English translation](spec-authoring/SKILL.en.md). The skill distinguishes confirmed requirements, observed practices, facts, and suggestions, preserving their conditions of applicability and unresolved issues. A practice does not become binding simply because it exists. The guidelines contain usable conventions; research and revision records are kept separately according to their purpose.
 
-Review Against Guidelines checks the source, applicable conditions, actual locations, and judgment for each requirement. Requirements that apply in several places are checked at every applicable location. It distinguishes evidence-supported compliance, deviations, non-applicability, insufficient evidence, and unchecked work. Results are delivered directly in chat without a separate coverage record or review document. Files for review material or revisions to the work are written only when the user explicitly requests those outputs or changes. Unresolved applicable requirements keep the review incomplete or its conclusion limited.
+Review checks the source, applicable conditions, actual locations, and judgment for each requirement. Requirements that apply in several places are checked at every applicable location. It distinguishes evidence-supported compliance, deviations, non-applicability, insufficient evidence, and unchecked work. Results are delivered directly in chat without a separate coverage record or review document. Files for review material or revisions to the work are written only when the user explicitly requests those outputs or changes. Unresolved applicable requirements keep the review incomplete or its conclusion limited.
 
 ```text
 spec-authoring/
@@ -99,11 +96,11 @@ The skill contains no executable scripts or external service dependencies.
 
 ## Validation and feedback
 
-`v0.2.1` improves both skill descriptions, automatic invocation settings, and the handling of brief requests, and provides optional persistent routing guidance. Chinese is the primary maintenance version, with corresponding English translations. Validation of `spec-authoring` includes format checks and a small number of drafting checks using real material.
+`v0.2.2` makes guideline construction and review against guidelines the two explicit entry points, updates the English translations and interface labels, and removes the previous recommendation to route by the type of object. Chinese is the primary maintenance version. Validation of `spec-authoring` includes format checks and a small number of drafting checks using real material.
 
 One static comparison of `spec-review` has been completed using a local controlled variant of real guidelines and note material, checking requirement coverage, repeated applicable locations, and the handling of unverified properties. The change to delivery in chat by default was checked in a separate focused trial; workspace file contents were identical before and after that review. Neither skill has demonstrated consistent improvement across tasks and models.
 
-The invocation changes were checked with guideline-based review, rule revision, and ordinary text replacement requests that did not name a skill. The trials selected the corresponding skill or neither, as appropriate. These limited agent trials do not establish actual invocation success rates across clients or sessions.
+Previous invocation trials had extra global routing enabled and cannot establish the skills' independent selection behavior. After removing that routing, this round used requests without skill names to check content review, guideline construction, review of a guideline document, and revision after review. Each used the corresponding skill. These remain limited agent trials, not evidence of invocation success rates across all clients or sessions.
 
 Use [Issues](https://github.com/Ethan-decoy/spec-authoring-skill/issues) to share your intended use, the behavior you observed, and judgments that need improvement. Remove private information before sharing material.
 

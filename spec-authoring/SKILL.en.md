@@ -1,6 +1,6 @@
 ---
 name: spec-authoring
-description: "Use when drafting, organizing, revising, or assessing shared conventions and guidelines, including turning scattered requirements into conventions, relaxing excessive constraints, or judging whether rules themselves are reasonable. Recognize the intent without requiring the word guidelines or a skill name. Not for merely following existing conventions to complete a task or checking work against them."
+description: "Build guidelines, turning context, requirements, and practice into shared principles, conventions, and boundaries. Use when the user wants to establish, draft, organize, or revise guidelines; not when the request is only to review existing material."
 license: MIT
 ---
 
@@ -8,7 +8,7 @@ license: MIT
 
 This is an English translation of [SKILL.md](SKILL.md). The Chinese original is the primary version for maintenance and validation and takes precedence if meanings differ.
 
-Use proportionate constraints to establish shared understanding, enabling users to make choices within a clear purpose, principles, and boundaries. The following are considerations to apply to the actual problem; they prescribe neither fixed sections for the result nor an execution order.
+Build usable guidelines from the actual purpose, context, and existing requirements. Use proportionate constraints to establish shared understanding, enabling users to make choices within a clear purpose, principles, and boundaries. The following are considerations to apply to the actual problem; they prescribe neither fixed sections for the result nor an execution order.
 
 ## Ground the guidelines in their actual use
 

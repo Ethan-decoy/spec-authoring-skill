@@ -1,10 +1,10 @@
 ---
 name: spec-review
-description: "Use when reviewing or rechecking work against conventions and requirements, including requests such as review under the guidelines, review this, check for omissions, or check again. Find applicable criteria from the conversation and project conventions without requiring a skill name or a repeated copy of the guidelines. Cover every applicable requirement and return results in chat by default. Not for merely assessing whether the rules themselves are reasonable."
+description: "Review existing material against applicable guidelines, checking every applicable requirement. Use for review, checking whether requirements are met, or rechecking revisions, including requests such as review this, review under the guidelines, or check again. The material may itself be a guideline document. Find criteria from the conversation and project, and deliver findings and review limitations in chat by default."
 license: MIT
 ---
 
-# Review Against Guidelines
+# Review
 
 This is an English translation of [SKILL.md](SKILL.md). The Chinese original is the primary version for maintenance and validation and takes precedence if meanings differ.
 
@@ -15,6 +15,8 @@ Deliver review results in chat by default, completing item-by-item checks as par
 ## Establish the basis and scope
 
 Identify the work and version under review, the scope specified by the user, and the applicable guidelines. When the user explicitly limits the scope, review that scope while retaining related context needed for sound judgments; otherwise cover the entire specified work. Priorities emphasized by the user affect the depth and order of review without automatically narrowing its scope.
+
+The material under review may itself be a guideline document. Assess it against applicable authoring principles, confirmed user requirements, and project goals, and provide findings and judgments. Turning those findings into new conventions or rewriting the guidelines is an authoring task, handled according to the user's request.
 
 When the user supplies only a title, path, or a brief request such as review this, locate the work and applicable conventions from the conversation and project entry points. Use what can already be established; clarify ambiguity when it affects scope or judgment. State gaps when the basis cannot be found, without inventing constraints.
 
