@@ -1,0 +1,4 @@
+interface:
+  display_name: "规范对照审阅"
+  short_description: "逐项核对规范与实际产物，在聊天中给出有依据的问题、结论及审阅限制"
+  default_prompt: "使用 $spec-review，依据适用规范完整审阅当前产物，在聊天中说明问题、依据和未完成的核查。"
