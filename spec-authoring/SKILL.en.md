@@ -1,6 +1,6 @@
 ---
 name: spec-authoring
-description: "Draft, revise, or review guidelines that use proportionate constraints to establish shared understanding and a basis for judgment. Clarify purpose, conditions of applicability, principles, and boundaries while preserving as much choice of methods as possible. Use when creating or changing the conventions themselves; not when merely following existing guidelines to complete another task."
+description: "Use when drafting, organizing, revising, or assessing shared conventions and guidelines, including turning scattered requirements into conventions, relaxing excessive constraints, or judging whether rules themselves are reasonable. Recognize the intent without requiring the word guidelines or a skill name. Not for merely following existing conventions to complete a task or checking work against them."
 license: MIT
 ---
 

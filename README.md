@@ -10,8 +10,8 @@ Agent Skills for authoring guidelines and reviewing work against them. Chinese i
 
 | 技能 | 用途 | 状态 |
 | --- | --- | --- |
-| [spec-authoring · 规范编写](spec-authoring/SKILL.md) | 编写、修订或评审规范本身，以适当约束明确目的、原则与边界，保留具体做法的选择空间 | 已发布 `v0.2.0` |
-| [spec-review · 规范对照审阅](spec-review/SKILL.md) | 依据既有规范逐项检查产物，核对全部适用要求和位置，在聊天中交付结论 | 已发布 `v0.2.0` |
+| [spec-authoring · 规范编写](spec-authoring/SKILL.md) | 编写、修订或评审规范本身，以适当约束明确目的、原则与边界，保留具体做法的选择空间 | 已发布 `v0.2.1` |
+| [spec-review · 规范对照审阅](spec-review/SKILL.md) | 依据既有规范逐项检查产物，核对全部适用要求和位置，在聊天中交付结论 | 已发布 `v0.2.1` |
 
 规范编写不以领域清单限定用途，也不要求固定栏目、执行步骤或输出模板。规范对照审阅以全部适用要求得到核对为完成标准，核对方式和结果组织按任务选择，默认在聊天中交付。
 
@@ -30,16 +30,16 @@ Agent Skills for authoring guidelines and reviewing work against them. Chinese i
 安装规范编写技能，向 Codex 发送：
 
 ```text
-$skill-installer 安装 https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.2.0/spec-authoring
+$skill-installer 安装 https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.2.1/spec-authoring
 ```
 
 安装规范对照审阅技能：
 
 ```text
-$skill-installer 安装 https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.2.0/spec-review
+$skill-installer 安装 https://github.com/Ethan-decoy/spec-authoring-skill/tree/v0.2.1/spec-review
 ```
 
-这些入口固定到 `v0.2.0`。需要跟随最新源码时，将链接中的 `v0.2.0` 换成 `main`。
+这些入口固定到 `v0.2.1`。需要跟随最新源码时，将链接中的 `v0.2.1` 换成 `main`。
 
 ### 手动安装
 
@@ -62,6 +62,19 @@ Codex 可使用用户目录 `~/.agents/skills/`，或目标项目中的 `.agents
 ```text
 使用 $spec-review，依据适用规范完整审阅当前产物，在聊天中说明问题、依据和审阅限制。
 ```
+
+### 自动调用
+
+两个技能都允许自动调用。请求“按……规范审阅……”，或上下文已有对象和适用约定时说“审阅一下”“再检查一遍”，适用于 `spec-review`；希望形成共同约定、调整过度约束或评估规则本身时，适用于 `spec-authoring`。不要求点名技能或重复提供已有规范。
+
+自动选择依据技能描述与任务的匹配，不能保证每次都选中。希望在已安装相应技能的环境中更明确地分派这类任务时，可在已使用的用户全局或项目 `AGENTS.md` 中按需追加简短指引：[Codex 技能说明](https://learn.chatgpt.com/docs/build-skills#how-chatgpt-and-codex-use-skills)。
+
+```text
+按规范或已有约定审阅、复核产物时，使用 $spec-review；上下文已明确对象与约定时，简短的“审阅一下”也按此处理。
+编写、整理、修订或评估约定本身时，使用 $spec-authoring。仅按既有约定执行任务时，不因此调用这两项技能。
+```
+
+安装包本身不改写用户的全局指引。新增指引后，可用新会话验证，避免沿用启动时已加载的旧指引；参见 [AGENTS.md 的发现规则](https://learn.chatgpt.com/docs/agent-configuration/agents-md#how-codex-discovers-guidance)。
 
 ## 内容与原则
 
@@ -88,9 +101,11 @@ spec-review/
 
 ## 验证与反馈
 
-`v0.2.0` 已公开发布，提供 `spec-authoring` 与 `spec-review`，两个技能均有中文原文与英文译文。`spec-authoring` 的指令与 `v0.1.1` 一致，已进行格式校验和少量实际材料的起草检查。
+`v0.2.1` 改进了两个技能的触发描述、自动调用配置及简短请求的处理，并提供可选的常驻分工指引。中文为主要维护版本，英文为对应译文。`spec-authoring` 已进行格式校验和少量实际材料的起草检查。
 
 `spec-review` 已用实际规范与笔记的本地受控副本完成一次静态对照试用，检查条款覆盖、重复适用位置及未验证项的处理。默认聊天交付的调整另经小范围试用，试用前后工作区文件状态一致。两项技能都尚未证明跨任务、跨模型的稳定改善。
+
+本次触发调整经过不点名技能的规范对照审阅、规则调整和普通文本替换试用，分别选择了对应技能或保持不调用。这是小范围代理试用，不代表所有客户端或会话中的实际自动调用成功率。
 
 欢迎通过 [Issues](https://github.com/Ethan-decoy/spec-authoring-skill/issues) 反馈预期用途、实际表现及需要改进的判断。分享材料前请移除私人信息。
 
