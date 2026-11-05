@@ -8,8 +8,8 @@ Agent Skills for establishing proportionate shared conventions and thoroughly ch
 
 | Skill | Purpose | Status |
 | --- | --- | --- |
-| [spec-authoring · Guideline Authoring](spec-authoring/SKILL.en.md) | Draft, revise, or assess the guidelines themselves, using proportionate constraints to clarify purpose, principles, and boundaries while preserving choice of methods | Public preview `v0.2.0` |
-| [spec-review · Review Against Guidelines](spec-review/SKILL.en.md) | Check work against existing guidelines item by item, covering every applicable requirement and location and delivering conclusions in chat | Public preview `v0.2.0` |
+| [spec-authoring · Guideline Authoring](spec-authoring/SKILL.en.md) | Draft, revise, or assess the guidelines themselves, using proportionate constraints to clarify purpose, principles, and boundaries while preserving choice of methods | Released `v0.2.0` |
+| [spec-review · Review Against Guidelines](spec-review/SKILL.en.md) | Check work against existing guidelines item by item, covering every applicable requirement and location and delivering conclusions in chat | Released `v0.2.0` |
 
 Guideline Authoring applies wherever shared conventions are needed and does not prescribe fixed sections, steps, or output templates. Review Against Guidelines is complete when all applicable requirements have been checked; methods and the organization of results suit the task, with delivery in chat by default.
 
@@ -84,9 +84,9 @@ spec-review/
 
 The skill contains no executable scripts or external service dependencies.
 
-## Trial use and feedback
+## Validation and feedback
 
-`v0.2.0` is a public preview that adds `spec-review`. Both skills include a Chinese original and an English translation. The `spec-authoring` instructions are unchanged from `v0.1.1`; validation covers format checks and a small number of drafting checks using real material.
+`v0.2.0` is publicly released and includes `spec-authoring` and `spec-review`. Both skills have a Chinese original and an English translation. The `spec-authoring` instructions are unchanged from `v0.1.1`; validation covers format checks and a small number of drafting checks using real material.
 
 One static comparison of `spec-review` has been completed using a local controlled variant of real guidelines and note material, checking requirement coverage, repeated applicable locations, and the handling of unverified properties. The change to delivery in chat by default was checked in a separate focused trial; workspace file contents were identical before and after that review. Neither skill has demonstrated consistent improvement across tasks and models.
 
