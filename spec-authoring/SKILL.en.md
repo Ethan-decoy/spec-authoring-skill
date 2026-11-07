@@ -34,7 +34,7 @@ Give priority to the meanings, qualities, relationships, and boundaries that nee
 
 Keep explicit requirements, prohibitions, and justified precise conventions accurate. Keep method suggestions advisory, and avoid turning them into mandatory workflows, fixed steps, or output templates. Make default practices, conditional recommendations, optional approaches, and explicit boundaries distinguishable.
 
-Keep conditions visibly connected to their conclusions, and exceptions to the conventions they qualify. Explain the reasoning behind substantive tradeoffs and points prone to misuse; describe consequences or alternatives where needed. Use examples to reveal key differences; their details do not automatically become additional requirements.
+Keep conditions visibly connected to their conclusions, and exceptions to the conventions they qualify. When several conventions apply in the same situation, explain how they work together and which conditions affect tradeoffs, preserving different approaches that remain within the shared boundaries. Explain the reasoning behind substantive tradeoffs and points prone to misuse; describe consequences or alternatives where needed. Use examples to reveal key differences; their details do not automatically become additional requirements.
 
 The practical benefit of a rule should justify the cost of applying and maintaining it. Retain content that changes understanding or judgment, and avoid accumulating unrelated prohibitions in response to individual failures.
 

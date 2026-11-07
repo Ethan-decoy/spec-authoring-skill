@@ -4,12 +4,14 @@
 
 Agent Skills for building guidelines and reviewing existing material against applicable guidelines.
 
+> This is the experimental branch `codex/experimental-spec-guidance`, based on stable release `v0.2.2`. It adds guidance on tradeoffs among jointly applicable conventions and on gathering evidence that answers the actual review requirement, for testing in real use.
+
 ## Skills
 
 | Skill | Purpose | Status |
 | --- | --- | --- |
-| [spec-authoring · Guideline Authoring](spec-authoring/SKILL.en.md) | Build or revise guidelines, forming shared principles, conventions, and boundaries from context and requirements while preserving choice of methods | Released `v0.2.2` |
-| [spec-review · Review](spec-review/SKILL.en.md) | Review existing material against applicable guidelines, checking every applicable requirement and location and reporting findings in chat; the material may itself be a guideline document | Released `v0.2.2` |
+| [spec-authoring · Guideline Authoring](spec-authoring/SKILL.en.md) | Build or revise guidelines, forming shared principles, conventions, and boundaries from context and requirements while preserving choice of methods | Experimental branch; stable release: `v0.2.2` |
+| [spec-review · Review](spec-review/SKILL.en.md) | Review existing material against applicable guidelines, checking every applicable requirement and location and reporting findings in chat; the material may itself be a guideline document | Experimental branch; stable release: `v0.2.2` |
 
 Guideline Authoring applies wherever shared conventions are needed and does not prescribe fixed sections, steps, or output templates. Review is complete when all applicable requirements have been checked; methods and the organization of results suit the task, with delivery in chat by default.
 
@@ -21,7 +23,21 @@ The installed entry point remains the Chinese `SKILL.md`, and the interface text
 
 ## Installation
 
-### Install with Codex
+### Install the experimental branch
+
+Send either or both requests below to Codex. They explicitly request replacement if a skill with the same name is already installed:
+
+```text
+$skill-installer Install spec-authoring from the codex/experimental-spec-guidance branch of the GitHub repository Ethan-decoy/spec-authoring-skill, replacing the existing skill with the same name.
+```
+
+```text
+$skill-installer Install spec-review from the codex/experimental-spec-guidance branch of the GitHub repository Ethan-decoy/spec-authoring-skill, replacing the existing skill with the same name.
+```
+
+Alternatively, [download the experimental branch source archive](https://github.com/Ethan-decoy/spec-authoring-skill/archive/refs/heads/codex/experimental-spec-guidance.zip), extract it, and follow the manual installation instructions below for the relevant skill folders. The branch may receive further updates; include the tested commit SHA in feedback. To return to the stable release, use the `v0.2.2` entry points below and request replacement of the existing skills.
+
+### Install the stable release with Codex
 
 The two skills can be installed independently as needed.
 
@@ -95,6 +111,8 @@ spec-review/
 The skill contains no executable scripts or external service dependencies.
 
 ## Validation and feedback
+
+The current experimental changes have passed skill format checks, a Chinese/English alignment review, and another analysis using the local analysis template. Template analysis assesses instruction design and does not establish effectiveness in actual use. A limited static comparison has not shown a clear advantage; consistent improvement across tasks and models remains unverified.
 
 `v0.2.2` makes guideline construction and review against guidelines the two explicit entry points, updates the English translations and interface labels, and removes the previous recommendation to route by the type of object. Chinese is the primary maintenance version. Validation of `spec-authoring` includes format checks and a small number of drafting checks using real material.
 

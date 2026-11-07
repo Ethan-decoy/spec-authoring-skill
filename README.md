@@ -6,12 +6,14 @@ Agent Skills for authoring guidelines and reviewing work against them. Chinese i
 
 帮助 AI 构建规范，并依据适用规范审阅已有内容。
 
+> 当前为实验分支 `codex/experimental-spec-guidance`，基于稳定版 `v0.2.2`。本次补充共同适用约定的取舍指导，以及审阅时证据应回答条款实际要求的指导，供实际使用测试。
+
 ## 技能
 
 | 技能 | 用途 | 状态 |
 | --- | --- | --- |
-| [spec-authoring · 规范构建](spec-authoring/SKILL.md) | 构建或修订规范，将背景与要求形成共同原则、约定和边界，保留具体做法的选择空间 | 已发布 `v0.2.2` |
-| [spec-review · 审阅](spec-review/SKILL.md) | 依据适用规范审阅已有内容，核对全部适用要求和位置，在聊天中给出问题与判断；对象也可以是规范本身 | 已发布 `v0.2.2` |
+| [spec-authoring · 规范构建](spec-authoring/SKILL.md) | 构建或修订规范，将背景与要求形成共同原则、约定和边界，保留具体做法的选择空间 | 实验分支；稳定版为 `v0.2.2` |
+| [spec-review · 审阅](spec-review/SKILL.md) | 依据适用规范审阅已有内容，核对全部适用要求和位置，在聊天中给出问题与判断；对象也可以是规范本身 | 实验分支；稳定版为 `v0.2.2` |
 
 规范构建不以领域清单限定用途，也不要求固定栏目、执行步骤或输出模板。审阅以全部适用要求得到核对为完成标准，核对方式和结果组织按任务选择，默认在聊天中交付。
 
@@ -23,7 +25,21 @@ Agent Skills for authoring guidelines and reviewing work against them. Chinese i
 
 ## 安装
 
-### 在 Codex 中安装
+### 安装实验分支
+
+将以下请求发送给 Codex，按需安装一个或两个技能。已安装同名技能时，以下请求明确要求替换为实验分支版本：
+
+```text
+$skill-installer 从 GitHub 仓库 Ethan-decoy/spec-authoring-skill 的 codex/experimental-spec-guidance 分支安装 spec-authoring，替换已有同名技能。
+```
+
+```text
+$skill-installer 从 GitHub 仓库 Ethan-decoy/spec-authoring-skill 的 codex/experimental-spec-guidance 分支安装 spec-review，替换已有同名技能。
+```
+
+也可以[下载实验分支源码包](https://github.com/Ethan-decoy/spec-authoring-skill/archive/refs/heads/codex/experimental-spec-guidance.zip)，解压后按下文的手动安装方式使用对应技能文件夹。分支可能继续更新，反馈时请附上所测试的提交号。恢复稳定版时，使用下方固定到 `v0.2.2` 的入口并要求替换同名技能。
+
+### 在 Codex 中安装稳定版
 
 两个技能可以按需独立安装。
 
@@ -97,6 +113,8 @@ spec-review/
 技能不包含可执行脚本或外部服务依赖。
 
 ## 验证与反馈
+
+当前实验改动已完成技能格式检查、中英文对应检查和本地分析模板复析。模板复析评估的是指令设计，不能证明实际使用效果。小范围静态对照试用尚未观察到明确优势，跨任务、跨模型的稳定改善仍待验证。
 
 `v0.2.2` 将两个技能的入口明确为“构建规范”和“依据规范审阅”，同步中英文说明及界面名称，并移除此前以对象类型划分职责的全局路由建议。中文为主要维护版本，英文为对应译文。`spec-authoring` 已进行格式校验和少量实际材料的起草检查。
 

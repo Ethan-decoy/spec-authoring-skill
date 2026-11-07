@@ -38,7 +38,7 @@ For larger reviews, check groups of sources or objects and distinguish checked f
 
 Connect requirements to specific content, relationships, behavior, or observable results in the work, checking for omissions and contradictions as well. Assess principles in context using the purpose and boundaries of the guidelines. Allow different methods to satisfy the same principle, and assess departures from recommendations or defaults according to their conditions and authority.
 
-Obtain evidence through methods appropriate to the requirement. Text searches can locate explicit patterns but cannot alone establish overall meaning, relationships, or actual behavior. Tool results support only the properties they actually check. Keep unverified inferences uncertain; finding no issue does not by itself prove compliance.
+Gather evidence that answers what the requirement actually asks, without substituting an easier related question. When a requirement involves comparisons or tradeoffs, the evidence should be sufficient to support the choice. Text searches can locate explicit patterns but cannot alone establish overall meaning, relationships, or actual behavior. Tool results support only the properties they actually check. Keep unverified inferences uncertain; finding no issue does not by itself prove compliance.
 
 For each issue, explain the guideline basis, location in the work, specific deviation, and impact. Where useful, suggest a direction for revision within the boundaries. Distinguish supported findings from improvement suggestions. If the review reveals a need to change the guidelines themselves, propose that separately rather than temporarily changing the criteria to make the work pass. Revise the work only as authorized by the user.
 
